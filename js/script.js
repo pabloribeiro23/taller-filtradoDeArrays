@@ -38,18 +38,13 @@ function showList(array) {
 
 let arrayFiltrado = [];
 
-const filtroDeArray = (array) => {
-  for(let element of array) {
-    if(typeof(element) === "string"){
-      arrayFiltrado.push(element);
-    }
-  }
-  return arrayFiltrado.sort();
+const filtroDeArray = (elemento) => {
+  return typeof elemento === 'string';
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
-  filtroDeArray(strangeArray);
+  arrayFiltrado = strangeArray.filter(filtroDeArray).sort();
   showList(arrayFiltrado);
 });
